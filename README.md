@@ -71,7 +71,7 @@ This repository follows concepts taught by **Abdul Bari** in his Data Structures
 
 * [x] Linked List
 * [x] Stack
-* [ ] Queue
+* [x] Queue
 * [ ] Trees
 * [ ] Binary Search Trees
 * [ ] Heap
