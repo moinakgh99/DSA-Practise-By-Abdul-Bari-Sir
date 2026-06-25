@@ -38,6 +38,16 @@ The goal of this repository is to strengthen problem-solving skills, understand 
 * Parenthesis Matching
 * Expression Evaluation
 
+### 📚 Queue
+
+* Queue using Array
+* Circular Queue
+* Queue using Linked List
+* Enqueue / Dequeue Operations
+* Queue Traversal
+* Front / Rear Operations
+* Queue Overflow & Underflow Handling
+
 ---
 
 ## 🛠️ Language Used
