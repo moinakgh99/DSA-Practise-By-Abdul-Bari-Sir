@@ -1,46 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-struct Stack {
-    int size;
-    int top;
-    struct Node **s;
-};
-
-void stackCreate(struct Stack *st, int size) {
-    st->size = size;
-    st->top = -1;
-    st->s = new Node*[st->size];
-}
-
-void push(struct Stack *st, struct Node *x) {
-    if(st->top == st->size - 1) cout << "Stack Overflow\n";
-    else {
-        st->top++;
-        st->s[st->top] = x;
-    }
-}
-
-struct Node *pop(struct Stack *st) {
-    struct Node *x = NULL;
-    if(st->top == -1) cout << "Stack underflow\n";
-    else {
-        x = st->s[st->top];
-        st->top--;
-    }
-    return x;
-}
-
-int isEmptyStack(struct Stack st) {
-    if(st.top == -1) return 1;
-    else return 0;
-}
-
-int isFull(struct Stack st) {
-    if(st.top == st.size - 1) return 1;
-    else return 0;
-}
-
 struct Node {
     struct Node *lchild;
     int data;
@@ -148,44 +108,30 @@ void postorder(struct Node *p) {
     } 
 }
 
-void iterPreorder(struct Node *p) {
-    struct Stack stk;
-    stackCreate(&stk, 100);
+void levelOrder(struct Node *root) {
+    struct Queue q;
+    create(&q, 100);
 
-    while(p || !isEmptyStack(stk)) {
-        if(p) {
-            cout << p->data;
-            push(&stk, p);
-            p = p->lchild;
-        }
-        else {
-            p = pop(&stk);
-            p = p->rchild;
-        }
-    }
-}
+    cout << root->data;
+    enqueue(&q, root);
 
-void iterInorder(struct Node *p) {
-    struct Stack stk;
-    stackCreate(&stk, 100);
-
-    while(p || !isEmptyStack(stk)) {
-        if(p) {
-            push(&stk, p);
-            p = p->lchild;
+    while(!isEmpty(q)) {
+        root = dequeue(&q);
+        if(root->lchild) {
+            cout << root->lchild->data;
+            enqueue(&q, root->lchild);
         }
-        else {
-            p = pop(&stk);
-            cout << p->data;
-            p = p->rchild;
+        if(root->rchild) {
+            cout << root->rchild->data;
+            enqueue(&q, root->rchild);
         }
     }
 }
 
 int main() {
     treeCreate();
-
-    iterPreorder(root);
+    levelOrder(root);
 
     return 0;
+
 }
