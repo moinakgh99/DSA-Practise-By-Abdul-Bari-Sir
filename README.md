@@ -48,6 +48,16 @@ The goal of this repository is to strengthen problem-solving skills, understand 
 * Front / Rear Operations
 * Queue Overflow & Underflow Handling
 
+### 📚 Binary Trees
+
+* Binary Tree Basics
+* Tree Creation
+* Recursive Traversals
+* Iterative Traversals
+* Level Order Traversal (BFS)
+* Height of Binary Tree
+* Counting Nodes
+
 ---
 
 ## 🛠️ Language Used
@@ -82,7 +92,7 @@ This repository follows concepts taught by **Abdul Bari** in his Data Structures
 * [x] Linked List
 * [x] Stack
 * [x] Queue
-* [ ] Trees
+* [x] Binary Trees
 * [ ] Binary Search Trees
 * [ ] Heap
 * [ ] Graphs
