@@ -58,6 +58,18 @@ The goal of this repository is to strengthen problem-solving skills, understand 
 * Height of Binary Tree
 * Counting Nodes
 
+### 📚 Binary Search Trees
+
+* Searching in a BST
+* Iterative Insertion
+* Recursive Insertion
+* BST Creation
+* Inorder Traversal
+* Recursive Deletion
+* Inorder Predecessor & Successor
+* Height of a BST
+* Generating BST from Preorder Traversal
+
 ---
 
 ## 🛠️ Language Used
@@ -93,7 +105,7 @@ This repository follows concepts taught by **Abdul Bari** in his Data Structures
 * [x] Stack
 * [x] Queue
 * [x] Binary Trees
-* [ ] Binary Search Trees
+* [x] Binary Search Trees
 * [ ] Heap
 * [ ] Graphs
 * [ ] Hashing
